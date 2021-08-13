@@ -1,0 +1,2 @@
+rootProject.name = "CloneProject"
+include ':app'

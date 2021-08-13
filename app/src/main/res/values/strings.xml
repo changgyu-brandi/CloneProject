@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CloneProject</string>
+
+
+    <string name="gnb_home_title">홈</string>
+    <string name="gnb_category_title">카테고리</string>
+    <string name="gnb_bookmark_title">찜</string>
+    <string name="gnb_mypage_title">내 프로필</string>
+
+</resources>

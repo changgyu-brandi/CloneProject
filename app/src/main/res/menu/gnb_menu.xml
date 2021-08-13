@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/gnb_home_title"
+        android:icon="@drawable/menu_icon"/>
+
+    <item
+        android:id="@+id/nav_category"
+        android:title="@string/gnb_category_title"
+        android:icon="@drawable/menu_icon"/>
+
+    <item
+        android:id="@+id/nav_bookmark"
+        android:title="@string/gnb_bookmark_title"
+        android:icon="@drawable/menu_icon"/>
+
+    <item
+        android:id="@+id/nav_mypage"
+        android:title="@string/gnb_mypage_title"
+        android:icon="@drawable/menu_icon"/>
+
+</menu>

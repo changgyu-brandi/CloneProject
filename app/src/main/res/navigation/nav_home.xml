@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.changgyu.cloneproject.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_categoryFragment"
+        app:destination="@id/categoryFragment"/>
+
+    <action
+        android:id="@+id/action_to_bookmarkFragment"
+        app:destination="@id/bookmarkFragment"/>
+
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="com.changgyu.cloneproject.ui.mypage.MypageFragment"
+        android:label="MypageFragment"
+        tools:layout="@layout/fragment_mypage"/>
+
+    <action
+        android:id="@+id/action_to_mypageFragment"
+        app:destination="@id/mypageFragment"/>
+
+
+</navigation>

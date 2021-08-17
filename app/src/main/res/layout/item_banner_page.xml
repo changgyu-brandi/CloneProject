@@ -5,13 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
-    <com.tmall.ultraviewpager.UltraViewPager
-        android:id="@+id/banner_pager"
+    <com.changgyu.cloneproject.util.NestedScrollableHost
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/banner_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.changgyu.cloneproject.util.NestedScrollableHost>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

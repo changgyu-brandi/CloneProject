@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_home"
+    android:id="@+id/home"
     app:startDestination="@id/homeFragment">
 
     <fragment
@@ -12,6 +12,20 @@
         tools:layout="@layout/fragment_home">
     </fragment>
 
+    <fragment
+        android:id="@+id/lifeFragment"
+        android:name="com.changgyu.cloneproject.ui.home.life.HomeLifeFragment"
+        android:label="HomeLifeFragment"
+        tools:layout="@layout/fragment_home_life">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="com.changgyu.cloneproject.ui.mypage.MypageFragment"
+        android:label="MypageFragment"
+        tools:layout="@layout/fragment_mypage"/>
+
     <action
         android:id="@+id/action_to_categoryFragment"
         app:destination="@id/categoryFragment"/>
@@ -19,12 +33,6 @@
     <action
         android:id="@+id/action_to_bookmarkFragment"
         app:destination="@id/bookmarkFragment"/>
-
-    <fragment
-        android:id="@+id/mypageFragment"
-        android:name="com.changgyu.cloneproject.ui.mypage.MypageFragment"
-        android:label="MypageFragment"
-        tools:layout="@layout/fragment_mypage"/>
 
     <action
         android:id="@+id/action_to_mypageFragment"

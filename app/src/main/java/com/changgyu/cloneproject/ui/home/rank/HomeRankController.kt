@@ -2,6 +2,7 @@ package com.changgyu.cloneproject.ui.home.rank
 
 import android.content.Context
 import com.airbnb.epoxy.EpoxyController
+import com.airbnb.epoxy.EpoxyModel
 import com.changgyu.cloneproject.ui.home.rank.banner.BannerData
 import com.changgyu.cloneproject.ui.home.rank.banner.BannerPageAdapter
 import com.changgyu.cloneproject.ui.home.rank.banner.banner
@@ -35,11 +36,13 @@ class HomeRankController(private val context: Context) : EpoxyController() {
             id("banner")
             viewPagerAdapter(BannerPageAdapter(context))
             bannerList(bannerList)
+            spanSizeOverride { totalSpanCount, position, itemCount -> 2 }
         }
         productList.forEach {
             product {
                 id(it.id)
                 productData(it)
+                spanSizeOverride { totalSpanCount, position, itemCount -> 1 }
             }
         }
 

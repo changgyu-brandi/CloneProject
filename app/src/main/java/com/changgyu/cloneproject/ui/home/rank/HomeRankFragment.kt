@@ -28,12 +28,9 @@ class HomeRankFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val gl = GridLayoutManager(requireContext(),2 )
-        gl.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup(){
-            override fun getSpanSize(position: Int): Int {
-                if(position==0) return 2
-                else return 1
-            }
-        }
+
+        controller.spanCount = 2
+        gl.spanSizeLookup = controller.spanSizeLookup
         binding.rankRv.layoutManager = gl
         binding.rankRv.adapter = controller.adapter
         controller.setData()

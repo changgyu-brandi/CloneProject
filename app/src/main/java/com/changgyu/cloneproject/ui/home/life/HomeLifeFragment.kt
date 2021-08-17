@@ -31,9 +31,9 @@ class HomeLifeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.textView.setOnClickListener {
-            Log.d("TAG","TAG : ${rootNavController()?.graph?.id}")
-            // working - rootNavController()?.navigate(R.id.action_to_mypageFragment)
-            // not working - findNavController().navigate(R.id.action_to_mypageFragment)
+
+            rootNavController()?.navigate(R.id.action_to_mypageFragment)
+//            findNavController().navigate(R.id.action_to_mypageFragment)
         }
 
     }

@@ -9,9 +9,11 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
+            app:layout_constraintHorizontal_bias="0"
             app:tabTextColor="@color/purple_200"
+            app:tabMode="auto"
             app:layout_constraintBottom_toTopOf="@+id/tab_pager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

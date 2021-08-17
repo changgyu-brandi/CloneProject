@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.changgyu.cloneproject.databinding.ActivityMainBinding
 import com.changgyu.cloneproject.util.setupWithNavController
 
@@ -36,16 +37,17 @@ class MainActivity : AppCompatActivity() {
             navGraphIds, supportFragmentManager, R.id.fcv, intent
         )
 
-       navController.observe(this, Observer { navController->
-           setupActionBarWithNavController(this, navController)
-       })
-
-
     }
-
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.value?.navigateUp() ?: false
+    }
+
+    override fun onBackPressed() {
+        if(navController.value?.popBackStack()==false){
+            super.onBackPressed()
+        }
+
     }
 
     companion object{
